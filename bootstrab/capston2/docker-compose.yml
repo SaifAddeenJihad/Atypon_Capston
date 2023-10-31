@@ -1,0 +1,49 @@
+version: '3'
+services:
+  Node1:
+    container_name: "Node21"
+    image : node2
+    ports:
+      - "7020:7020"
+      - "7023:7023"
+      - "7025:7025"
+    environment:
+      - port=7020
+      - nodeId=1
+      - NumOfNodes=4
+
+  Node2:
+    container_name: "Node22"
+    image: node2
+    ports:
+      - "7030:7030"
+      - "7033:7033"
+      - "7035:7035"
+    environment:
+      - port=7030
+      - nodeId=2
+      - NumOfNodes=4
+
+  Node3:
+    container_name: "Node23"
+    image: node2
+    ports:
+      - "7040:7040"
+      - "7043:7043"
+      - "7045:7045"
+    environment:
+      - port=7040
+      - nodeId=3
+      - NumOfNodes=4
+
+  Node4:
+    container_name: "Node24"
+    image: node2
+    ports:
+      - "7050:7050"
+      - "7053:7053"
+      - "7055:7055"
+    environment:
+      - port=7050
+      - nodeId=4
+      - NumOfNodes=4
